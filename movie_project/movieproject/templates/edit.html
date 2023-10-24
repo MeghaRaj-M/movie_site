@@ -1,5 +1,10 @@
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit">
-</form>
+{% extends 'base.html' %}
+{% block body %}
+<div class="edit" style="">
+     <form method="POST" enctype="multipart/form-data" style="margin:100px; border: 2px solid black; padding:50px">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit">
+     </form>
+</div>
+{% endblock %}
